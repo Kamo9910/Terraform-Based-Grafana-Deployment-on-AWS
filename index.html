@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Terraform with AWS</title>
+</head>
+<body>
+        <div class="centered-text">
+
+        <h1>Terraform Based Grafana Deployment on AWS</h1>
+        
+        <img class="myImage" src="Untitled design.gif" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+        
+        <h2>Project Overview:</h2>
+        <p>In this project, I designed and deployed a Grafana monitoring server on AWS EC2 using Terraform (Infrastructure as Code).The entire infrastructure — including networking security and software installation — was automated, ensuring repeatability and consistency.To maintain secure and scalable state management, I configured Amazon S3 as the Terraform backend, enabling safe storage of infrastructure state files.</p>
+        <h3>Architecture Overview</h3>
+        <p>- Terraform provisions an EC2 instance <br>
+           - A security group allows SSH and port 3000 for Grafana <br>
+           - Grafana is installed automatically during instance creation <br>
+           - Terraform state is stored securely in Amazon S3 <br>
+           - Grafana is accessed via browser using the EC2 public IP</p>
+
+         <h3>Technologies Used</h3>
+         <p>- AWS EC2 <br>
+            - Terraform <br>
+            - Grafana <br>
+            - SSh <br>
+            -Amazon Linux</p>
+         <h3>Steps taken to complets this project :</h3>
+            <h4>1. Terraform Project Setup</h4>
+            <img class="myImage" src="Screenshot (1).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+            <img class="myImage" src="Screenshot (2).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+             <br>
+            <img class="myImage" src="Screenshot (3).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <p>- Initialized a Terraform project <br>
+               - Configured the AWS provider <br>
+               - Defined the deployment region <br>
+               - Structured the files for clarity and maintainability <br>
+               - Provisioned an EC2 instance using Terraform <br>
+               - Attached the security group
+               - Associated a key pair for SSH accessed <br>
+               - On the security group configured inbound for port 22(SSH) and Port 3000</p>
+            <br>
+            <h4>2. Remote Backend Configuration (S3)</h4>
+            <img class="myImage" src="Screenshot (4).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <img class="myImage" src="Screenshot (5).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <p>- Created an S3 bucket to store Terraform state <br>
+               - Configured Terraform backend to use S3 <br>
+               - Enabled safer collaboration and state persistence </p>
+            <br>
+            <h4>3. SSh Access and Verification</h4>
+            <img class="myImage" src="Screenshot (6).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (7).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (8).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <p>- Shhed into the EC2 instance <br>
+               - Updated the system <br>
+               - installed Grafana 
+               - Verified Grafana service status <br>
+               - Confirmed successful installation</p>
+            <br>
+            <h4>4. Accessing Grafana Dashboard</h4>
+            <img class="myImage" src="Screenshot (9).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (10).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (11).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (12).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (13).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (14).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <br>
+            <img class="myImage" src="Screenshot (15).png" alt="Terraform" style="transition: transform 0.3s ease;" height="50%" width="50%">
+            <p>- Opened browser using EC2 public IP on port 3000<br>
+               - Logged into Grafana web interface <br>
+               - Confirmed application avalaibility </p>
+            <br>
+            <h3>Project Outcomes</h3>
+            <p>- Successfully deployed a production-style Grafana server <br>
+               - Automated infrastructure provisioning using Terraform <br>
+               - Implemented secure access using AWS Security Groups <br>
+               - Used S3 backend for Terraform state management</p>
+              
+
+           
+            </div>
+
+        <script src="javascript.js" charset="utf-8" ></script>
+
+</body>
+
+</html>
